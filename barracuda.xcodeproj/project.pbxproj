@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		7CF2CF782329AEC70031F2FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF2CF772329AEC70031F2FB /* AppDelegate.swift */; };
-		7CF2CF7A2329AEC70031F2FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF2CF792329AEC70031F2FB /* ViewController.swift */; };
 		7CF2CF7D2329AEC70031F2FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF2CF7B2329AEC70031F2FB /* Main.storyboard */; };
 		7CF2CF7F2329AEC90031F2FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7CF2CF7E2329AEC90031F2FB /* Assets.xcassets */; };
 		7CF2CF822329AEC90031F2FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF2CF802329AEC90031F2FB /* LaunchScreen.storyboard */; };
+		7CF2CF8E2329B0470031F2FB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF2CF8D2329B0470031F2FB /* UserViewController.swift */; };
+		7CF2CF902329B0680031F2FB /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF2CF8F2329B0680031F2FB /* Geofence.swift */; };
+		7CF2CF922329B0770031F2FB /* GeofenceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF2CF912329B0770031F2FB /* GeofenceHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7CF2CF742329AEC70031F2FB /* barracuda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barracuda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF2CF772329AEC70031F2FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7CF2CF792329AEC70031F2FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7CF2CF7C2329AEC70031F2FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7CF2CF7E2329AEC90031F2FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7CF2CF812329AEC90031F2FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7CF2CF832329AEC90031F2FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CF2CF8D2329B0470031F2FB /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		7CF2CF8F2329B0680031F2FB /* Geofence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
+		7CF2CF912329B0770031F2FB /* GeofenceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeofenceHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,48 @@
 		7CF2CF762329AEC70031F2FB /* barracuda */ = {
 			isa = PBXGroup;
 			children = (
-				7CF2CF772329AEC70031F2FB /* AppDelegate.swift */,
-				7CF2CF792329AEC70031F2FB /* ViewController.swift */,
-				7CF2CF7B2329AEC70031F2FB /* Main.storyboard */,
-				7CF2CF7E2329AEC90031F2FB /* Assets.xcassets */,
-				7CF2CF802329AEC90031F2FB /* LaunchScreen.storyboard */,
-				7CF2CF832329AEC90031F2FB /* Info.plist */,
+				7CF2CF8C2329AF460031F2FB /* resources */,
+				7CF2CF8B2329AEF80031F2FB /* Controller */,
+				7CF2CF8A2329AEDD0031F2FB /* View  */,
+				7CF2CF892329AED30031F2FB /* Model */,
 			);
 			path = barracuda;
+			sourceTree = "<group>";
+		};
+		7CF2CF892329AED30031F2FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7CF2CF8F2329B0680031F2FB /* Geofence.swift */,
+				7CF2CF912329B0770031F2FB /* GeofenceHandler.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7CF2CF8A2329AEDD0031F2FB /* View  */ = {
+			isa = PBXGroup;
+			children = (
+				7CF2CF802329AEC90031F2FB /* LaunchScreen.storyboard */,
+				7CF2CF7B2329AEC70031F2FB /* Main.storyboard */,
+			);
+			path = "View ";
+			sourceTree = "<group>";
+		};
+		7CF2CF8B2329AEF80031F2FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7CF2CF8D2329B0470031F2FB /* UserViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7CF2CF8C2329AF460031F2FB /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				7CF2CF832329AEC90031F2FB /* Info.plist */,
+				7CF2CF7E2329AEC90031F2FB /* Assets.xcassets */,
+				7CF2CF772329AEC70031F2FB /* AppDelegate.swift */,
+			);
+			path = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CF2CF7A2329AEC70031F2FB /* ViewController.swift in Sources */,
+				7CF2CF902329B0680031F2FB /* Geofence.swift in Sources */,
 				7CF2CF782329AEC70031F2FB /* AppDelegate.swift in Sources */,
+				7CF2CF922329B0770031F2FB /* GeofenceHandler.swift in Sources */,
+				7CF2CF8E2329B0470031F2FB /* UserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
