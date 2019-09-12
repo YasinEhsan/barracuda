@@ -4,10 +4,11 @@
 - **Stack** MapKit, CoreLocation, User Notification
 
 - **Takeaway** 
-<!--| Quick Description  |  How? |  -->
-<!--|---|---|---|-->
-<!--|   |   |   -->
-<!--|   |   |    -->
+| Quick Description  |  How? |  
+|---|---|---|
+| First commit Xcode remote | git commit -a -m "Commit title here" terminal  |   
+|   |   |    
+|   |   |    
 
 ```Swift
 
