@@ -25,7 +25,7 @@ class UserViewController: UIViewController {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
-//        locationManager.startUpdatingLocation()
+//        locationManager.startUpdatingLocation()  for iphone?
         locationManager.distanceFilter = 100
         mapView.showsUserLocation = true //checkout under shield
     }
