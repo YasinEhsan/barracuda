@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import UserNotifications
 
 class UserViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
@@ -35,6 +36,24 @@ class UserViewController: UIViewController {
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: 10000, longitudinalMeters: 10000)
             mapView.setRegion(region, animated: true)
         }
+    }
+    
+    func showAlert(_ title: String, _ message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func showNotifications(_ title: String, _ message: String){
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = message
+        content.badge = 2 //the red notification icon
+        content.sound = .default
+        
+        let request = UNNotificationRequest(identifier: "noti", content: content, trigger: nil)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
     
 }
