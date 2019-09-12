@@ -48,7 +48,26 @@ extension UserViewController: CLLocationManagerDelegate{
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didEnterRegion region: CLRegion) {
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
+        
+    }
+    
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         //best practices
+    }
+}
+
+extension UserViewController: MKMapViewDelegate{
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        guard let circleOverlay = overlay as? MKCircle else { return MKOverlayRenderer() }
+        let circleRenderer = MKCircleRenderer(circle: circleOverlay)
+        circleRenderer.strokeColor = .red
+        circleRenderer.fillColor = .red
+        circleRenderer.alpha = 0.5
+        return circleRenderer
     }
 }
